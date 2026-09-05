@@ -11,4 +11,4 @@ This is a relational database for a flight booking application. This system mana
 It must answer questions for customers and business users alike. The system provides information to passengers. A passenger may ask questions such as, what is the date of my booking, what is the duration of my flight, or what are the available flight routes. A business user will ask questions to understand what are the most frequented routes, what flight routes are not worth maintaining, and what is the average fare paid for a given set of constraints. The database knows the domain of every attribute to reject invalid state, using constraints as protection. Relationships are modeled across data structures using foreign keys to enforces is called referential integrity.
 
 
-![ERD diagram of the airline booking domain](schema/airline_booking_erd.png)
+![ERD diagram of the airline booking domain](schema/erd.png)
