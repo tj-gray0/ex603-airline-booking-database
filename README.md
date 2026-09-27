@@ -12,3 +12,9 @@ It must answer questions for customers and business users alike. The system prov
 
 
 ![ERD diagram of the airline booking domain](schema/erd.png)
+
+The database has five tables: passengers, flights, bookings, airports, and flight_routes. The main tables use system generated IDs. Flight_routes is the junction table, with a composite primary key of flight_id and airport_id.
+
+Bookings are retained if a passenger or flight is deleted, with the foreign key set to NULL. Deleting a flight or airport cascades only to its flight_routes rows. CHECK constraints prevent negative fares, invalid flight durations, and inconsistent airport roles.
+
+The schema runs on PostgreSQL 17. The script drops tables in reverse dependency order and creates them in dependency order so it can be run again without manual cleanup. 
