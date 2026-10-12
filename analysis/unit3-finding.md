@@ -1,0 +1,7 @@
+To the dashboard team,
+
+The dashboard initially reports that half of all bookings ended in a passenger no-show. The provided data shows 200 bookings with 12 as passenger no-shows. That is 6% of all bookings. There are 34 cancelled bookings, but the other cancellations include payment failures, flight cancellations, and passengers cancelling and should not all be no-shows. 
+
+The filter I tested left out 166 bookings because they had no cancellation reason recorded. It returned 22 bookings with other reasons, and another count found the 12 no-shows. That only accounted for 34 of the 200 bookings. Including the missing reasons brought the count back to 200. I also found a separate problem where a calculated value was used before it was available, which caused an error. These checks explain the problems I reproduced, but they do not establish exactly how the dashboard got its original figure.
+
+I recommend correcting the dashboard and checking its output against all 200 bookings before making a decision about the routes. The reported rate does not match this dataset, so the hold on the route profitability review should be lifted and the review should continue using the corrected numbers. Missing reasons should stay visible rather than being dropped or treated as proof of a no-show.
